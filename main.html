@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <title>Productive Set</title>
+</head>
+<body>
+    <div class="background">
+        <div class="spotify-box">
+            <h2>SPOTIFY</h2>
+            <div>
+                <input type="text" id="spotify" class="spotify" placeholder="Copy your playlist link here">
+                <button id="tambah-playlist" class="playlist-btn">Enter</button>
+            </div>
+            <iframe class="spotify-iframe" id="spotify-iframe" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div id="todoList" class="todolist">
+            <h2>TO-DO LIST</h2>
+            <div class="inputan">
+                <input id="input-tugas" type="text" placeholder="Enter new task" class="input-tugas">
+                <button id="tombol-tambah" class="tambah-tugas" onclick="tambahTugas()">Add</button>
+            </div>
+
+            <ul id="list-tugas" class="list-tugas">
+                <!-- <li class="selesai"></li> -->
+                <!-- <li></li> -->
+            </ul>
+        </div>
+        <div id="pomodoro" class="pomodoro">
+            <h2>POMODORO</h2>
+            <div class="setting-waktu">
+                <input type="number" id="time-input" class="time-input" min="1" value="" placeholder="Set your working/break time">
+            </div>
+            <div id="time-display" class="timer">00:00</div>
+            <div class="controls">
+                <button id="start-btn">Start</button>
+                <button id="stop-btn">Reset</button>
+                <button id="reset-btn">Start Over</button>
+            </div>
+        </div>
+    </div>
+    <video autoplay muted loop class="video">
+        <source src="videoplayback.mp4" type="video/mp4"></source>
+    </video>
+    <script src="todo.js"></script>
+    <script src="podomoro.js"></script>
+    <script src="spotify.js"></script>
+</body>
+</html>
